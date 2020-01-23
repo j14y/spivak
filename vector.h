@@ -22,7 +22,7 @@ namespace spivak
             {
                 std::vector<float> temp;
                 assert(dim() == w.dim());
-                for (int i = 0; i < dim(); i++)
+                for (int i = 0; i < c.size(); i++)
                 {
                     temp.push_back(get(i)+w.get(i));
                 }
@@ -36,11 +36,31 @@ namespace spivak
             {
                                 std::vector<float> temp;
                 assert(dim() == w.dim());
-                for (int i = 0; i < dim(); i++)
+                for (int i = 0; i < c.size(); i++)
                 {
                     temp.push_back(get(i)-w.get(i));
                 }
                 return spivak::vector(temp);   
+            }
+
+            spivak::vector mult(float a)
+            {
+                std::vector <float> t;
+                for (int i = 0; i < c.size(); i++)
+                {
+                    t.push_back(get(i) * a);
+                }
+                return spivak::vector(t);
+            }
+
+            spivak::vector div(float a)
+            {
+                std::vector <float> t;
+                for (int i = 0; i < c.size(); i++)
+                {
+                    t.push_back(get(i) / a);
+                }
+                return spivak::vector(t);   
             }
 
             float mag()
@@ -81,9 +101,9 @@ namespace spivak
 
 
 
-            float projection()
+            spivak::vector projection(spivak::vector w)
             {
-
+                return mult(dot(w) / std::pow(mag(), 2.0f));
             }
 
             spivak::vector unit()
@@ -98,6 +118,7 @@ namespace spivak
 
 
             float get(int i) { return c[i]; }
-            int dim() { return c.size(); }
+            int dim() { return c.size() + 1; }
+            int dim() { return c.size() + 1; }
     };
 }
