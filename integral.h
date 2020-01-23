@@ -13,7 +13,8 @@ namespace spivak
         private:
             spivak::function f;
         public:
-            
+            indefinite_integral() {}
+            float eval () {}
     };
 
     class definite_integral
@@ -22,6 +23,7 @@ namespace spivak
             float a, b;
             spivak::function f;
         public:
-
+            definite_integral() {}
+            float eval() {}
     };
 }

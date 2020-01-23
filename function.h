@@ -31,7 +31,6 @@ namespace spivak
 
             void set_f(std::string ff) { f = ff; }
 
-
     };
 
     class function_mv

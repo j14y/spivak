@@ -34,5 +34,31 @@ namespace spivak
                 } 
                 return sum;
             }
+
+            float right_sum(spivak::function f, float a, float b, float p_size) 
+            {
+                assert(b > a);
+                float sum = 0.0f;
+                float p_offset = (b - a) / p_size;
+                for (float i = a; i <= b; i+=p_offset) // TODO change params
+                {
+                    float vars []= {i};
+                    // sum+=p_offset*f.eval(vars);
+                } 
+                return sum;
+            }
+
+            float middle_sum(spivak::function f, float a, float b, float p_size) 
+            {
+                assert(b > a);
+                float sum = 0.0f;
+                float p_offset = (b - a) / p_size;
+                for (float i = a; i <= b; i+=p_offset) // TODO change params
+                {
+                    float vars []= {i};
+                    // sum+=p_offset*f.eval(vars);
+                } 
+                return sum;
+            }
     };
 }
