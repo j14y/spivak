@@ -1,7 +1,7 @@
 #include <iostream>
-#include "riemann.h"
-#include "function.h"
-#include "lib/fparser/fparser.hh"
+#include "../src/riemann.h"
+#include "../src/function.h"
+#include "../lib/fparser/fparser.hh"
 
 int main (int args, char * argl [])
 {

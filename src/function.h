@@ -1,9 +1,9 @@
 #pragma once
 
 #include <string>
-#include "lib/fparser/fparser.cc"
-#include "lib/fparser/fpoptimizer.cc"
-#include "lib/fparser/fparser.hh"
+#include "../lib/fparser/fparser.cc"
+#include "../lib/fparser/fpoptimizer.cc"
+#include "../lib/fparser/fparser.hh"
 
 /**
  * Single variable function
