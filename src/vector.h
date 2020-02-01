@@ -12,7 +12,9 @@ namespace spivak
     {
         private:
             std::vector<float> c; // vector components
-            
+        
+            vector() {}
+
             vector(std::vector<float> cc) 
             {
                 c = cc;
@@ -165,5 +167,15 @@ namespace spivak
              * returns number of dimensions of this vector
              */
             int dim() { return c.size() + 1; }
+
+            /**
+             * sets the i-th component to a given value
+             */
+            void set(int a, float b) { c[a] = b; }
+
+            /**
+             * replaces all vector components
+             */
+            void set(std::vector<float> cc) { c = cc; }
     };
 }

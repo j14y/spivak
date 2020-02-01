@@ -1,6 +1,5 @@
 A collection of mathematical concepts presented in 'Calculus' - Michael Spivak
 
-
 Contents:
 
 - riemann integral
